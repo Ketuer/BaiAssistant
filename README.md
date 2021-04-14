@@ -21,6 +21,7 @@
 
 ## 你可以直接使用已经编写好的抢活动程序 😘
 * 需要先下载安装 [Java 8](https://www.oracle.com/java/technologies/javase-jre8-downloads.html) 或以上环境
+* 下载最新的 [default.zip](https://github.com/Ketuer/BaiAssistant/releases) 程序包
 * Windows用户：
    * 解压后直接双击windows.bat即可开启
 * Mac用户：
