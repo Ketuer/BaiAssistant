@@ -3,10 +3,11 @@
   <groupId>crack.cduestc</groupId>
   <artifactId>byjh</artifactId>
   <versioning>
-    <release>1.0-Release</release>
+    <release>1.1-Release</release>
     <versions>
       <version>1.0-Release</version>
+      <version>1.1-Release</version>
     </versions>
-    <lastUpdated>20210414090246</lastUpdated>
+    <lastUpdated>20210414140234</lastUpdated>
   </versioning>
 </metadata>
