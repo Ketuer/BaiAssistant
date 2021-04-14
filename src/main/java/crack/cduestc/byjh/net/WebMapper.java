@@ -38,6 +38,8 @@ public class WebMapper {
                 return "报名中";
             case 5:
                 return "报名结束";
+            case 7:
+                return "活动中";
             case 8:
                 return "已结束";
             default:

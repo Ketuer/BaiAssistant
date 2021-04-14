@@ -1,12 +1,16 @@
 package crack.cduestc.byjh.entity.account;
 
+import com.alibaba.fastjson.JSONArray;
 import com.alibaba.fastjson.JSONObject;
 import crack.cduestc.byjh.entity.activity.SignedActivity;
+import crack.cduestc.byjh.entity.score.ScoreAdd;
+import crack.cduestc.byjh.entity.score.ScoreData;
 import crack.cduestc.byjh.exception.ActivityOprException;
 import crack.cduestc.byjh.exception.LoginException;
 import crack.cduestc.byjh.net.Result;
 import crack.cduestc.byjh.net.WebManager;
 
+import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -52,6 +56,12 @@ public class BaiAccount implements LoginAccount, OperableAccount {
         this.password = password;
     }
 
+    /**
+     * 创建一个账号实体
+     * @param id 学号
+     * @param password 密码
+     * @return 账号实体
+     */
     public static BaiAccount createAccount(String id, String password) {
         return new BaiAccount(id, password);
     }
@@ -77,6 +87,34 @@ public class BaiAccount implements LoginAccount, OperableAccount {
     }
 
     @Override
+    public void logout() throws LoginException {
+        Result result = WebManager.logout(token);
+        if (result.getStatusCode() == 10000){
+            this.token = this.userId = this.userName = this.headImgUrl = this.identity = this.phone = this.major
+                    =this.clazz = this.sex = null;
+        }else {
+            throw new LoginException(result.getStatusCode(), result.getMessage());
+        }
+    }
+
+    @Override
+    public void resetPassword(String newPassword) throws LoginException {
+        Result result = WebManager.resetPassword(token, newPassword);
+        if (result.getStatusCode() == 10000){
+            this.token = this.userId = this.userName = this.headImgUrl = this.identity = this.phone = this.major
+                    =this.clazz = this.sex = null;
+            password = newPassword;
+        }else {
+            throw new LoginException(result.getStatusCode(), result.getMessage());
+        }
+    }
+
+    /**
+     * 报名一个活动
+     * @param activityId 活动id
+     * @throws ActivityOprException 活动异常
+     */
+    @Override
     public void signActivity(int activityId) throws ActivityOprException {
         if (token == null) throw new ActivityOprException(10009, "此用户未登录！");
         Result result = WebManager.signActivity(token, activityId);
@@ -85,6 +123,11 @@ public class BaiAccount implements LoginAccount, OperableAccount {
         }
     }
 
+    /**
+     * 取消一个活动
+     * @param activityId 活动id
+     * @throws ActivityOprException 活动异常
+     */
     @Override
     public void cancelActivity(int activityId) throws ActivityOprException {
         if (token == null) throw new ActivityOprException(10009, "此用户未登录！");
@@ -94,11 +137,59 @@ public class BaiAccount implements LoginAccount, OperableAccount {
         }
     }
 
+    /**
+     * 获取所有已参加的活动列表
+     * @throws ActivityOprException 活动异常
+     */
     @Override
     public List<SignedActivity> getActivities() throws ActivityOprException {
         if (token == null) throw new ActivityOprException(10009, "此用户未登录！");
         return WebManager.getAccountActivities(token);
     }
+
+    /**
+     * 获取得分信息
+     * @return 得分信息
+     * @throws LoginException 登陆异常
+     * @since 1.1
+     */
+    @Override
+    public ScoreData getScore() throws LoginException {
+        if (token == null) throw new LoginException(10009, "此用户未登录！");
+        Result result = WebManager.getScore(token);
+        if (result.getStatusCode() != 10000) {
+            throw new LoginException(result.getStatusCode(), result.getMessage());
+        }
+        JSONObject object = result.getOriginData().getJSONObject("data");
+        return new ScoreData(object.getInteger("bx"), object.getInteger("dx"),
+                object.getInteger("jm"), object.getInteger("md"), object.getInteger("number"));
+    }
+
+    /**
+     * 获取加分记录
+     * @return 得分信息
+     * @throws LoginException 登陆异常
+     * @since 1.1
+     */
+    @Override
+    public List<ScoreAdd> getScoreAddList() throws LoginException{
+        List<ScoreAdd> adds = new ArrayList<>();
+        if (token == null) throw new LoginException(10009, "此用户未登录！");
+        Result result = WebManager.getScoreList(token);
+        if (result.getStatusCode() != 10000) {
+            throw new LoginException(result.getStatusCode(), result.getMessage());
+        }
+        JSONArray object = result.getOriginData().getJSONArray("data");
+        object.forEach(o -> {
+            JSONObject j = JSONObject.parseObject(o.toString());
+            adds.add(new ScoreAdd(j.getString("titleing"),
+                    j.getInteger("did"), j.getInteger("num"),
+                    j.getString("project"), j.getString("reason")));
+        });
+
+        return adds;
+    }
+
 
     /**
      * 获取账号

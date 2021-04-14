@@ -6,7 +6,9 @@ public enum StatusType{
     /* 正在报名的活动 */
     SIGNING(4),
     /* 报名结束的活动 */
-    ACTIVE(5),
+    READY(5),
+    /* 活动正在进行 */
+    ACTIVE(7),
     /* 已结束的活动 */
     END(8);
 

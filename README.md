@@ -1,18 +1,24 @@
 # BaiAssistant 百叶计划助手
 不会吧不会吧，不会还有人在花钱请别人代抢活动，还有人在卖活动名额吧，为什么要给那些人赚这个钱呢，自己多买包烟不香吗。
-## 简介👑
+## 简介 👑
 * 电子科技大学成都学院百叶计划助手，支持通过接口直接操作百叶计划账号
 * 本项目遵循GPLv2协议，仅供学习交流使用，严禁用于商业用途
 * 如果喜欢本项目，请点个star⭐️
 * 注意本接口需要全程使用校园网或寝室宽带
 
-## 版本历史👒
+## 版本历史 👒
 * ### 1.0 - Release
     * 支持基本的用户登录操作，并获取用户信息
     * 直接操作用户报名活动、取消活动
     * 活动列表查询，获取活动信息
+* ### 1.1 - Release
+    * 更加强大的活动查询系统，支持模糊匹配、筛选查找、高级筛选查找
+    * 新增用户登出和重置密码操作
+    * 新增分数查询操作
+    * 新增加分记录查询操作
+    * 现在默认使用外网接口（可以手动切回内网，更稳定）
 
-## 直接使用已经编写好的抢活动程序😘
+## 直接使用已经编写好的抢活动程序 😘
 * 在使用之前请安装好 Java 8 以上环境
 * 下载 [Client-X.X-SNAPSHOT.jar](https://github.com/Ketuer/BaiAssistant/releases/tag/BaiAssistant) 文件
 * 在同级目录下运行cmd（macOS为终端）
@@ -23,11 +29,11 @@
    * 程序每秒刷新一次活动列表，直到活动出现（推荐在前5分钟就挂在电脑上）
    * 报名成功后，程序会自动退出
 
-## 添加依赖💩
+## 添加依赖 👻
 #### 你可以直接导入jar依赖或是添加maven依赖：
 * 直接下载 [BaiAssistant-X.X-Release.jar](https://github.com/Ketuer/BaiAssistant/releases/tag/BaiAssistant) 并导入jar文件作为依赖。
 * 也可以添加Maven项目依赖：
-```xml
+```html
 <repositories>
     <repository>
         <id>crack-mvn-repo</id>
@@ -44,8 +50,8 @@
 </dependencies>
 ```
 
-## 快速开始🤟
-* ### 获取所有活动并打印到控制台👻
+## 快速开始 🤟
+* ### 获取所有活动并打印到控制台
 ```java
 public class Main {
     public static void main(String[] args) throws ByjhAssistantException {
@@ -87,7 +93,6 @@ public class Main {
 }
 ```
 
-## 应用型操作🎒
 * ### 获取指定活动并报名
 ```java
 public class Main {

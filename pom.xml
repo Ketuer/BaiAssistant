@@ -6,7 +6,7 @@
 
     <groupId>crack.cduestc</groupId>
     <artifactId>byjh</artifactId>
-    <version>1.0-Release</version>
+    <version>1.1-Release</version>
 
     <properties>
         <maven.compiler.source>8</maven.compiler.source>
