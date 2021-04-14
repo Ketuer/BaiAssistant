@@ -13,6 +13,7 @@
     * 活动列表查询，获取活动信息
 
 ## 直接使用已经编写好的抢活动程序😘
+* 在使用之前请安装好 Java 8 以上环境
 * 下载 [Client-X.X-SNAPSHOT.jar](https://github.com/Ketuer/BaiAssistant/releases/tag/BaiAssistant) 文件
 * 在同级目录下运行cmd（macOS为终端）
 * 输入 java -jar Client-X.X-SNAPSHOT.jar
