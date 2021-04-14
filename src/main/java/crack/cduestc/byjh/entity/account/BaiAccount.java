@@ -80,7 +80,7 @@ public class BaiAccount implements LoginAccount, OperableAccount {
     public void signActivity(int activityId) throws ActivityOprException {
         if (token == null) throw new ActivityOprException(10009, "此用户未登录！");
         Result result = WebManager.signActivity(token, activityId);
-        if (result.getStatusCode() == 10000) {
+        if (result.getStatusCode() != 10000) {
             throw new ActivityOprException(result.getStatusCode(), result.getMessage());
         }
     }
