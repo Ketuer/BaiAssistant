@@ -1,6 +1,7 @@
 # BaiAssistant 百叶计划助手
 不会吧不会吧，不会还有人在花钱请别人代抢活动，还有人在卖活动名额吧，为什么要给那些人赚这个钱呢，自己多买包烟不香吗。
 ## 简介 👑
+* 此项目基于Java开发，支持跨平台使用。
 * 电子科技大学成都学院百叶计划助手，支持通过接口直接操作百叶计划账号
 * 本项目遵循GPLv2协议，仅供学习交流使用，严禁用于商业用途
 * 如果喜欢本项目，请点个star⭐️
@@ -18,16 +19,14 @@
     * 新增加分记录查询操作
     * 现在默认使用外网接口（可以手动切回内网，更稳定）
 
-## 直接使用已经编写好的抢活动程序 😘
-* 在使用之前请安装好 Java 8 以上环境
-* 下载 [Client-X.X-SNAPSHOT.jar](https://github.com/Ketuer/BaiAssistant/releases/tag/BaiAssistant) 文件
-* 在同级目录下运行cmd（macOS为终端）
-* 输入 java -jar Client-X.X-SNAPSHOT.jar
-* 注意替换 X.X 为当前版本
-   * 输入学号、密码、活动名称即可开始
-   * 活动名称是模糊匹配，检索能力更强
-   * 程序每秒刷新一次活动列表，直到活动出现（推荐在前5分钟就挂在电脑上）
-   * 报名成功后，程序会自动退出
+## 你可以直接使用已经编写好的抢活动程序 😘
+* 需要先下载安装 [Java 8](https://www.oracle.com/java/technologies/javase-jre8-downloads.html) 或以上环境
+* Windows用户：
+   * 解压后直接双击windows.bat即可开启
+* Mac用户：
+   * 请在桌面解压，然后进入文件夹双击macos.command
+* Linux用户：
+   * 解压后运行linux.sh即可
 
 ## 添加依赖 👻
 #### 你可以直接导入jar依赖或是添加maven依赖：
