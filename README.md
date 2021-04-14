@@ -11,7 +11,7 @@
     * 活动列表查询，获取活动信息
 
 ## 添加依赖
-#### 你可以直接导入jar依赖或是添加maven项目依赖：
+#### 你可以直接导入jar依赖或是添加maven依赖：
 * 直接 [下载](https://github.com/Ketuer/BaiAssistant/releases/tag/BaiAssistant) 并导入jar文件作为依赖。
 * 也可以添加Maven项目依赖：
 ```xml
