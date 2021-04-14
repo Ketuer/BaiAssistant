@@ -45,7 +45,7 @@
     <dependency>
         <groupId>crack.cduestc</groupId>
         <artifactId>byjh</artifactId>
-        <version>1.0-Release</version>
+        <version>1.1-Release</version>
     </dependency>
 </dependencies>
 ```
