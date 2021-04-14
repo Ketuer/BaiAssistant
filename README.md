@@ -102,7 +102,7 @@ public class Main {
         account.login();
         //获取所有活动并筛选名称带有 "计算机" 的活动
         //在抢活动时同理，建议contains模糊匹配，匹配到时直接报名，反正可以取消
-        WebManager.getAllActivities(StatusType.ALL)
+        WebManager.getAllActivities(StatusType.SIGNING)
                 .stream()
                 .filter(activity -> activity.getName().contains("计算机"))
                 .forEach(activity -> {
