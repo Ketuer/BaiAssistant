@@ -213,6 +213,7 @@ public class WebManager {
             String data = createHttpPost(url, params);
             if(!data.isEmpty()) {
                 JSONObject object = JSONObject.parseObject(data);
+                if(object.getString("data").equals("0")) return activities;
                 object.getJSONArray("data").forEach(a -> {
                     JSONObject activity = JSONObject.parseObject(a.toString());
                     int id = activity.getInteger("id");
