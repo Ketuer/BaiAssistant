@@ -12,9 +12,19 @@
     * 直接操作用户报名活动、取消活动
     * 活动列表查询，获取活动信息
 
+## 直接使用已经编写好的抢活动程序
+* 下载 [Client-X.X-SNAPSHOT.jar](https://github.com/Ketuer/BaiAssistant/releases/tag/BaiAssistant) 文件
+* 在同级目录下运行cmd（macOS为终端）
+* 输入 java -jar Client-X.X-SNAPSHOT.jar
+* 注意替换 X.X 为当前版本
+   * 输入学号、密码、活动名称即可开始
+   * 活动名称是模糊匹配，检索能力更强
+   * 程序每秒刷新一次活动列表，直到活动出现（推荐在前5分钟就挂在电脑上）
+   * 报名成功后，程序会自动退出
+
 ## 添加依赖
 #### 你可以直接导入jar依赖或是添加maven依赖：
-* 直接 [下载](https://github.com/Ketuer/BaiAssistant/releases/tag/BaiAssistant) 并导入jar文件作为依赖。
+* 直接下载 [BaiAssistant-X.X-Release.jar](https://github.com/Ketuer/BaiAssistant/releases/tag/BaiAssistant) 并导入jar文件作为依赖。
 * 也可以添加Maven项目依赖：
 ```xml
 <repositories>
