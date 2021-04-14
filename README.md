@@ -8,16 +8,16 @@
 * <s>注意本接口需要全程使用校园网或寝室宽带</s> (1.1版本开始已默认外网访问)
 
 ## 版本历史 👒
-* ### 1.0 - Release
-    * 支持基本的用户登录操作，并获取用户信息
-    * 直接操作用户报名活动、取消活动
-    * 活动列表查询，获取活动信息
 * ### 1.1 - Release
     * 更加强大的活动查询系统，支持模糊匹配、筛选查找、高级筛选查找
     * 新增用户登出和重置密码操作
     * 新增分数查询操作
     * 新增加分记录查询操作
     * 现在默认使用外网接口（可以手动切回内网，更稳定）
+* ### 1.0 - Release
+    * 支持基本的用户登录操作，并获取用户信息
+    * 直接操作用户报名活动、取消活动
+    * 活动列表查询，获取活动信息
 
 ## 你可以直接使用已经编写好的抢活动程序 😘
 * 需要先下载安装 [Java 8](https://www.oracle.com/java/technologies/javase-jre8-downloads.html) 或以上环境
@@ -31,7 +31,7 @@
 
 ## 添加依赖 👻
 #### 你可以直接导入jar依赖或是添加maven依赖：
-* 直接下载 [BaiAssistant-X.X-Release.jar](https://github.com/Ketuer/BaiAssistant/releases/tag/BaiAssistant) 并导入jar文件作为依赖。
+* 直接下载最新的 [BaiAssistant-X.X-Release.jar](https://github.com/Ketuer/BaiAssistant/releases/) 并导入jar文件作为依赖。
 * 也可以添加Maven项目依赖：
 ```html
 <repositories>
