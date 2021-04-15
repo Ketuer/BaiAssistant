@@ -30,6 +30,7 @@
    * 解压后运行linux.sh即可
 
 # 如果你是Java开发者
+🧳 我们的开发者wiki: https://github.com/Ketuer/BaiAssistant/wiki
 ## 已知问题 👨
 分为 系统问题 和 代码问题，系统问题是百叶计划本身的问题，代码问题是本项目未完善的问题
 * [系统问题] 在外网环境下无法进行登出操作（迷）
@@ -38,7 +39,7 @@
 
 ## 添加依赖 👻
 #### 你可以直接导入jar依赖或是添加maven依赖：
-* 直接下载最新的 [BaiAssistant-X.X-Release.jar](https://github.com/Ketuer/BaiAssistant/releases/) 并导入jar文件作为依赖。
+* 直接下载最新的 [BaiAssistant-X.X-Release.jar](https://github.com/Ketuer/BaiAssistant/releases/) 和 [FastJSON-1.1.36.jar](https://repo1.maven.org/maven2/com/alibaba/fastjson/1.1.36/fastjson-1.1.36.jar) 并导入jar文件作为依赖。
 * 也可以添加Maven项目依赖：
 ```html
 <repositories>
