@@ -29,6 +29,11 @@
 * Linux用户：
    * 解压后运行linux.sh即可
 
+# 如果你是Java开发者
+## 已知问题
+* 在外网环境下无法只需登出操作（迷）
+* 某些即使已经结束的活动，也能进行报名，一开始显示为缺席，过一段时间直接变成加分（？？？？？）
+
 ## 添加依赖 👻
 #### 你可以直接导入jar依赖或是添加maven依赖：
 * 直接下载最新的 [BaiAssistant-X.X-Release.jar](https://github.com/Ketuer/BaiAssistant/releases/) 并导入jar文件作为依赖。
