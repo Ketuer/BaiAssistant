@@ -105,7 +105,7 @@ public class Main {
         //先登录账户
         BaiAccount account = BaiAccount.createAccount("1950870101", "123456");
         account.login();
-        //获取所有活动并筛选名称带有 "计算机" 的活动
+        //获取所有活动并筛选名称带有 "计算机" 的活动，类型为SIGNING保证是正在报名的活动
         //在抢活动时同理，建议contains模糊匹配，匹配到时直接报名，反正可以取消
         WebManager.getAllActivities(StatusType.SIGNING)
                 .stream()
