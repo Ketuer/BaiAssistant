@@ -40,6 +40,8 @@
 ## 添加依赖 👻
 #### 你可以直接导入jar依赖或是添加maven依赖：
 * 直接下载最新的 [BaiAssistant-X.X-Release.jar](https://github.com/Ketuer/BaiAssistant/releases/) 和 [FastJSON-1.1.36.jar](https://repo1.maven.org/maven2/com/alibaba/fastjson/1.1.36/fastjson-1.1.36.jar) 并导入jar文件作为依赖。
+    * [IDEA添加依赖](https://jingyan.baidu.com/article/e2284b2bb82806e2e6118dbf.html)
+    * [Eclipse添加依赖](https://jingyan.baidu.com/article/db55b609aa8b1e4ba20a2f4b.html) 
 * 也可以添加Maven项目依赖：
 ```html
 <repositories>
