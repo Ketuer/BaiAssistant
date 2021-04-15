@@ -30,7 +30,7 @@ public class Result {
      *  <li>10002 未通过</li>
      *  <li>10003 服务器返回了错误的内容</li>
      *  <li>10004 网络请求出现异常</li>
-     * <ul/>
+     * </ul>
      * @return 状态码
      */
     public int getStatusCode() {
